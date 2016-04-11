@@ -9,16 +9,16 @@ var htmlmin = require('gulp-htmlmin');
 var babel = require('gulp-babel');
 
 
-var watcher = gulp.watch(['./main/js/**/*.js', './main/styles/*.scss', './main/views/**/**/*.html', './main/*.html'], ['default']); 
+var watcher = gulp.watch(['./main/js/**/*.js', './main/styles/*.scss', './main/views/**/**/*.html', './main/*.html'], ['default']);
 watcher.on('change', function( event ) {
         console.log('File ' + event.path + ' was ' + event.type + ' at ' + new Date() + ' , running tasks...');
 });
 
 gulp.task('sass', function() {
     gulp.src('./main/styles/*.scss')
-        .pipe(sass())
+        .pipe(sass({errLogToConsole: true}))
         .pipe(uglifycss())
-        .pipe(concat('styles.css')) 
+        .pipe(concat('styles.css'))
         .pipe(gulp.dest('./public/styles'))
 });
 gulp.task('javascript', function() {
