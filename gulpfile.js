@@ -42,3 +42,8 @@ gulp.task('index', function() {
         .pipe(gulp.dest('./public'))
 });
 gulp.task('default', ['sass', 'javascript', 'html', 'index']);
+
+function errorHandler (error) {
+  console.log(error.toString());
+  this.emit('end');
+}
