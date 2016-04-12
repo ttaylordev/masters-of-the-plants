@@ -2,10 +2,10 @@ angular.module('plantMasters', ['ui.router'])
 
 .config(function($urlRouterProvider, $stateProvider) {
     $stateProvider
-        .state('landing', {
+        .state('main', {
             url:'/',
-            controller: 'landingCtrl',
-            templateUrl: 'views/landing.html'
+            controller: 'MainCtrl',
+            templateUrl: 'views/main.html'
         })
         $urlRouterProvider.otherwise('/');
 })

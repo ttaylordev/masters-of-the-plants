@@ -3,6 +3,9 @@ node_modules
 bower_components
 config.json
 keys.js
+keys.json
 *.out
 data
 *.log
+*.min.*
+
