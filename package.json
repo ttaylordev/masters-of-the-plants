@@ -13,7 +13,6 @@
     "babel-preset-es2015": "^6.6.0",
     "body-parser": "~1.13.2",
     "express": "~4.13.1",
-    "googlemaps": "^1.4.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
